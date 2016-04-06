@@ -1,0 +1,17 @@
+{ "products": [{
+  "name": "Widget",
+  "description": "Perfect for so many household uses",
+  "price": 18,
+  "image": "http://www.lovefood.com/images/content/body/grater.jpg"
+}, {
+  "name": "Thing",
+  "description": "Amazing!",
+  "price": 18,
+  "image": "https://i.ytimg.com/vi/EMLlcbBEsV4/maxresdefault.jpg"
+}, {
+    "name": "Widget2",
+    "description": "Perfect for so many household uses",
+    "price": 18,
+    "image": "http://www.lovefood.com/images/content/body/grater.jpg"
+  }]
+}
