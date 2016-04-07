@@ -6,4 +6,11 @@ export default Ember.Route.extend({
       products: this.store.findAll('product'),
     });
   },
+  actions: {
+    save(params) {
+      var newProduct = this.store.createRecord('product', params);
+      newProduct.save();
+      this.transitionTo('admin');
+    },
+  }
 });

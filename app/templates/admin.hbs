@@ -1,4 +1,8 @@
 <div class="container">
+  <div class="admin-add-product">
+    <h2>Add New Product</h2>
+    {{new-product save="save"}}
+  </div>
   <ul class="admin-gallery">
     {{#each model.products as |product|}}
       {{admin-tile product=product}}
