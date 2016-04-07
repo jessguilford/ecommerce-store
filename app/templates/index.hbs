@@ -1,7 +1,12 @@
-<div class="container">
-  <ul class="product-gallery">
-    {{#each model.products as |product|}}
-      {{product-tile product=product}}
-    {{/each}}
-  </ul>
+<div class="wrapper">
+  <div class="hero">
+    <h1>Epic E-Commerce</h1>
+  </div>
+  <div class="container">
+    <ul class="product-gallery">
+      {{#each model.products as |product|}}
+        {{product-tile product=product}}
+      {{/each}}
+    </ul>
+  </div>
 </div>

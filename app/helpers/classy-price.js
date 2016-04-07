@@ -8,14 +8,12 @@ export default Ember.Helper.extend({
     var testThing = testItems[0];
     var total = 0;
 
-    testItems.forEach(function(item) {
+    testItems.forEach(function(/*item*/) {
       var testPrice = testThing.get('price');
       total+= testPrice;
       console.log(total);
     });
     return total;
-    // I can check testprice in debugger console and it works, but it won't log below
-    console.log(testPrice);
   }
 });
-// This ember helper is a class-based helper
+// This ember helper is a class-based helper, it does the same thing as total-price but slightly differently

@@ -6,8 +6,5 @@ export default Ember.Service.extend({
 
   add(item) {
     this.get('items').pushObject(item);
-    //this.get('total').push(item.price);
-    //console.log(this.get('items'[0]).price);
-    // this.incrementProperty('total', 10);
   }
 });

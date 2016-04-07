@@ -12,6 +12,9 @@
 
 $med-margin: 15px;
 
+$med-breakpoint: 620px;
+$lg-breakpoint: 1120px;
+
 /* Mixins */
 @mixin clearfix {
   content: "";
@@ -23,6 +26,7 @@ $med-margin: 15px;
 
 body {
   font-family: sans-serif;
+  margin: 0;
 }
 
 ul {
@@ -31,7 +35,7 @@ ul {
 }
 
 h1 {
-
+  margin: 0;
 }
 
 a {
@@ -43,13 +47,18 @@ a {
   ul {
     overflow: auto;
     background-color: #eee;
-    width: 60%;
+    width: 100%;
     margin: 0 auto;
-
     li {
-      float: left;
-      width: 33.33%;
       text-align: center;
+    }
+    @media screen and (min-width: $med-breakpoint) {
+      width: 80%;
+      li {
+        float: left;
+        width: 33.33%;
+        text-align: center;
+      }
     }
   }
 }
@@ -57,18 +66,62 @@ a {
 /* Containers and layout */
 
 .container {
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
+  @media screen and (min-width: $med-breakpoint) {
+    width: 80%;
+  }
+}
+
+/* Index page */
+
+.hero {
+  height: 450px;
+  background-color: #d9d9d9;
 }
 
 /* Product tiles */
 
 .product-gallery {
-  li {
-    float: left;
-    width: 30%;
-  }
   &::after {
     @include clearfix;
+  }
+  @media screen and (min-width: $med-breakpoint) and (max-width: $lg-breakpoint) {
+    div:nth-child(2n+1) {
+      li {
+        width: 66%;
+        background-color: whitesmoke;
+      }
+    }
+    div:nth-child(2n+0) {
+      li {
+        width: 30%;
+      }
+    }
+  }
+}
+
+.product-item {
+  background-color: #a2aeae;
+  height: 300px;
+  width: 100%;
+  margin: $med-margin 0;
+  @media screen and (min-width: $med-breakpoint) {
+    width: 31.33%;
+    margin: 0 1%;
+    float: left;
+  }
+  @media screen and (min-width: $lg-breakpoint) {
+    width: 31.33%;
+    margin: 0 1%;
+    float: left;
+  }
+}
+
+/* Admin page */
+
+.admin-gallery {
+  li {
+    border: 1px solid lightgrey;
   }
 }

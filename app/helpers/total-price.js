@@ -1,10 +1,9 @@
 import Ember from 'ember';
 
 export function totalPrice(params) {
-  var test1 = params[0];
+  var inputs = params[0];
   var total = 0;
-  console.log(test1);
-  test1.forEach(function(item) {
+  inputs.forEach(function(item) {
    total += item.get('price');
   });
   return total;
