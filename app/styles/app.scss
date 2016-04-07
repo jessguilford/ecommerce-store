@@ -1,0 +1,74 @@
+/* Wireframing */
+
+.product-thumbnail {
+  width: 100px;
+}
+
+
+
+/* End Wireframing */
+
+/* Variables */
+
+$med-margin: 15px;
+
+/* Mixins */
+@mixin clearfix {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Base */
+
+body {
+  font-family: sans-serif;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
+}
+
+h1 {
+
+}
+
+a {
+  color: #232322;
+}
+/* Navbar */
+
+.navbar {
+  ul {
+    overflow: auto;
+    background-color: #eee;
+    width: 60%;
+    margin: 0 auto;
+
+    li {
+      float: left;
+      width: 33.33%;
+      text-align: center;
+    }
+  }
+}
+
+/* Containers and layout */
+
+.container {
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Product tiles */
+
+.product-gallery {
+  li {
+    float: left;
+    width: 30%;
+  }
+  &::after {
+    @include clearfix;
+  }
+}
