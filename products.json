@@ -6,12 +6,17 @@
 }, {
   "name": "Thing",
   "description": "Amazing!",
-  "price": 18,
+  "price": 12,
   "image": "https://i.ytimg.com/vi/EMLlcbBEsV4/maxresdefault.jpg"
 }, {
     "name": "Widget2",
     "description": "Perfect for so many household uses",
-    "price": 18,
+    "price": 25,
+    "image": "http://www.lovefood.com/images/content/body/grater.jpg"
+}, {
+    "name": "Widget3",
+    "description": "Neato",
+    "price": 15,
     "image": "http://www.lovefood.com/images/content/body/grater.jpg"
   }]
 }
