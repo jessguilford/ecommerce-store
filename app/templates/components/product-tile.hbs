@@ -1,7 +1,8 @@
 <li class="product-item">
-  <h1>{{product.name}}</h1>
-  <img class="product-thumbnail" src="{{product.image}}">
-  <p>{{product.price}}</p>
-  <p>{{product.description}}</p>
+  {{#link-to 'product' product.id}}
+    <h1>{{product.name}}</h1>
+    <img class="product-thumbnail" src="{{product.image}}">
+    <p>{{product.price}}</p>
+  {{/link-to}}
   <button {{action 'addToCart' product}}>Add to Cart</button>
 </li>
