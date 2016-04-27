@@ -109,20 +109,20 @@ a {
     @include clearfix;
   }
   @media screen and (min-width: $med-breakpoint) and (max-width: $lg-breakpoint) {
-    div:nth-child(4n+1), div:nth-child(4n+4) {
-      li {
-        width: 66%;
-        .product-image {
-          max-width: 220px;
-        }
+    div:nth-child(odd) {
+      .product-image {
+        float: right;
+      }
+      .product-info {
+        float: left;
       }
     }
-    div:nth-child(4n+2), div:nth-child(4n+3) {
-      li {
-        width: 30%;
-        .product-image {
-          max-width: 130px;
-        }
+    div:nth-child(even) {
+      .product-image {
+        float: left;
+      }
+      .product-info {
+        float: right;
       }
     }
   }
@@ -135,6 +135,9 @@ a {
   margin: $med-margin 0;
   padding: 10px;
   text-align: center;
+  &::after {
+    @include clearfix;
+  }
   a {
     text-decoration: none;
   }
@@ -142,20 +145,34 @@ a {
     font-size: 1.3em;
   }
   .product-image {
-    max-width: 400px;
-    margin: $med-margin auto;
+    max-width: 420px;
+    margin: 0 auto;
     img {
       width: 100%;
     }
   }
+  .product-info {
+    float: none;
+  }
   @media screen and (min-width: $med-breakpoint) {
-    width: 31.33%;
     height: 300px;
     margin: 10px 1%;
-    float: left;
+  }
+  @media screen and (min-width: $med-breakpoint) and (max-width: $lg-breakpoint) {
+    // width: 31.33%;
+    .product-image {
+      width: 66%;
+      margin: 0 auto;
+    }
+    .product-info {
+      width: 40%;
+      height: 200px;
+      margin: 40px auto;
+    }
   }
   @media screen and (min-width: $lg-breakpoint) {
     width: 31.33%;
+    margin: 10px 1%;
     float: left;
     .product-image {
       max-width: 200px;
