@@ -54,22 +54,41 @@ button {
 /* Navbar */
 
 .navbar {
-  ul {
-    overflow: auto;
+  position: relative;
+  .navlinks {
     width: 100%;
     margin: 0 auto;
+    display: none;
     li {
-      text-align: center;
-      margin: 10px;
+      text-align: left;
+      padding: 10px 0;
+      //border: 1px solid black;
     }
-    @media screen and (min-width: $med-breakpoint) {
-      width: 80%;
+  }
+  .menu-toggle {
+    width: 100px;
+    height: 100%;
+    //border: 1px solid black;
+    float: right;
+    margin: 10px 20px;
+    text-align: right;
+  }
+  @media screen and (min-width: $med-breakpoint) {
+    width: 80%;
+    margin: 0 auto;
+    .navlinks {
+      display:block;
+      text-align: center;
       li {
+        padding: 5px 0;
         float: left;
         width: 33.33%;
         text-align: center;
         margin: 10px 0;
       }
+    }
+    .menu-toggle {
+      display: none;
     }
   }
 }
