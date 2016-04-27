@@ -104,7 +104,7 @@ a {
 
 /* Product tiles */
 
-.product-gallery {
+.featured-gallery {
   &::after {
     @include clearfix;
   }
@@ -128,9 +128,8 @@ a {
   }
 }
 
-.product-item {
+.featured-item {
   background-color: whitesmoke;
-  height: 420px;
   width: 100%;
   margin: $med-margin 0;
   padding: 10px;
@@ -145,7 +144,7 @@ a {
     font-size: 1.3em;
   }
   .product-image {
-    max-width: 420px;
+    max-width: 550px;
     margin: 0 auto;
     img {
       width: 100%;
@@ -154,23 +153,49 @@ a {
   .product-info {
     float: none;
   }
-  @media screen and (min-width: $med-breakpoint) {
-    height: 300px;
-    margin: 10px 1%;
-  }
   @media screen and (min-width: $med-breakpoint) and (max-width: $lg-breakpoint) {
     // width: 31.33%;
     .product-image {
-      width: 66%;
-      margin: 0 auto;
+      width: 70%;
+      margin: auto 0;
     }
     .product-info {
-      width: 40%;
+      width: 30%;
       height: 200px;
-      margin: 40px auto;
+      // border: 1px solid gray;
+    }
+    .product-info > * {
+      width: 70%;
+      margin: 40px auto 0 auto;
+      // border: 1px solid red;
     }
   }
   @media screen and (min-width: $lg-breakpoint) {
+    width: 31.33%;
+    margin: 10px 1%;
+    float: left;
+    .product-image {
+      max-width: 200px;
+    }
+  }
+}
+
+.sm-product-gallery {
+  background-color: #554554;
+  &::after {
+    @include clearfix;
+  }
+}
+
+.sm-product-item {
+  width: 100%;
+  margin: $med-margin auto;
+  .sm-product-image {
+    img {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: $med-breakpoint) {
     width: 31.33%;
     margin: 10px 1%;
     float: left;

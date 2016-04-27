@@ -1,9 +1,9 @@
-<li class="featured-item">
+<li class="sm-product-item">
   {{#link-to 'product' product.id}}
-    <div class="product-image">
+    <div class="sm-product-image">
       <img class="product-thumbnail" src="{{product.image}}">
     </div>
-    <div class="product-info">
+    <div class="sm-product-info">
       <h1>{{product.name}}</h1>
       <p>${{product.price}}</p>
       {{#if (array-contains shoppingCart.items this)}}

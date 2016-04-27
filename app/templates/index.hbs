@@ -7,9 +7,14 @@
     </div>
   </div>
   <div class="container">
-    <ul class="product-gallery">
-      {{#each model.products as |product|}}
+    <ul class="featured-gallery">
+      {{#each model.featured as |product|}}
         {{product-tile product=product}}
+      {{/each}}
+    </ul>
+    <ul class="sm-product-gallery">
+      {{#each model.products as |product|}}
+        {{small-product-tile product=product}}
       {{/each}}
     </ul>
   </div>
