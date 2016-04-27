@@ -44,6 +44,12 @@ h1 {
 
 a {
   color: #232322;
+  text-decoration: none;
+}
+
+button {
+  border-style: none;
+  padding: 10px 20px;
 }
 /* Navbar */
 
@@ -132,16 +138,14 @@ a {
   background-color: whitesmoke;
   width: 100%;
   margin: $med-margin 0;
-  padding: 10px;
+  //padding: 10px;
   text-align: center;
   &::after {
     @include clearfix;
   }
-  a {
-    text-decoration: none;
-  }
   h1 {
     font-size: 1.3em;
+    margin-top: $med-margin;
   }
   .product-image {
     max-width: 550px;
@@ -152,6 +156,9 @@ a {
   }
   .product-info {
     float: none;
+  }
+  @media screen and (max-width: $med-breakpoint) {
+    display: none;
   }
   @media screen and (min-width: $med-breakpoint) and (max-width: $lg-breakpoint) {
     // width: 31.33%;
@@ -173,6 +180,7 @@ a {
   @media screen and (min-width: $lg-breakpoint) {
     width: 31.33%;
     margin: 10px 1%;
+    padding-top: 30px;
     float: left;
     .product-image {
       max-width: 200px;
@@ -181,18 +189,27 @@ a {
 }
 
 .sm-product-gallery {
-  background-color: #554554;
   &::after {
     @include clearfix;
+  }
+  @media screen and (max-width: $lg-breakpoint) {
+    margin: 0 -1%;
   }
 }
 
 .sm-product-item {
   width: 100%;
   margin: $med-margin auto;
+  text-align: center;
   .sm-product-image {
     img {
       width: 100%;
+    }
+  }
+  .sm-product-info {
+    h1 {
+      margin-top: $med-margin;
+      font-size: 1.1em;
     }
   }
   @media screen and (min-width: $med-breakpoint) {
@@ -203,6 +220,29 @@ a {
       max-width: 200px;
     }
   }
+}
+
+/* Product pages */
+
+.product-page {
+  padding: 20px 0;
+  &::after {
+    @include clearfix;
+  }
+}
+
+.product-page-image {
+  width: 50%;
+  // border: 1px solid black;
+  float: left;
+  margin: 0 30px;
+  img {
+    width: 100%;
+  }
+}
+
+.product-page-info {
+  // border: 1px solid black;
 }
 
 /* Admin page */

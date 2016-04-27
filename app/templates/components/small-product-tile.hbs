@@ -6,11 +6,6 @@
     <div class="sm-product-info">
       <h1>{{product.name}}</h1>
       <p>${{product.price}}</p>
-      {{#if (array-contains shoppingCart.items this)}}
-      <button {{action 'removeFromCart' product}}>Remove From Cart</button>
-      {{else}}
-      <button {{action 'addToCart' product}}>Add to Cart</button>
-      {{/if}}
     </div>
   {{/link-to}}
 </li>
