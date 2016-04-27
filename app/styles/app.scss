@@ -51,34 +51,32 @@ button {
   border-style: none;
   padding: 10px 20px;
 }
+
 /* Navbar */
 
 .navbar {
-  position: relative;
+  position: fixed;
+  width: 40%;
+  background-color: white;
   .navlinks {
     width: 100%;
     margin: 0 auto;
     display: none;
+    margin-top: 60px;
     li {
       text-align: left;
-      padding: 10px 0;
-      //border: 1px solid black;
+      padding: 10px 20px;
+      // border: 1px solid black;
     }
   }
-  .menu-toggle {
-    width: 100px;
-    height: 100%;
-    //border: 1px solid black;
-    float: right;
-    margin: 10px 20px;
-    text-align: right;
-  }
   @media screen and (min-width: $med-breakpoint) {
+    position: static;
     width: 80%;
     margin: 0 auto;
     .navlinks {
       display:block;
       text-align: center;
+      margin-top: 0;
       li {
         padding: 5px 0;
         float: left;
@@ -87,10 +85,25 @@ button {
         margin: 10px 0;
       }
     }
-    .menu-toggle {
-      display: none;
-    }
   }
+}
+
+.menu-toggle {
+  width: 40%;
+  // border: 1px solid black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  text-align: left;
+  z-index: 10;
+  @media screen and (min-width: $med-breakpoint) {
+    display: none;
+  }
+}
+
+.navbar-extended {
+  height: 100vh;
 }
 
 /* Containers and layout */
