@@ -6,7 +6,7 @@
   <ul class="admin-gallery">
     <h2>All Products</h2>
     {{#each model.products as |product|}}
-      {{admin-tile product=product}}
+      {{admin-tile product=product updateProduct="updateProduct" destroyProduct="destroyProduct"}}
     {{/each}}
   </ul>
 </div>

@@ -3,4 +3,6 @@
   <img class="product-thumbnail" src="{{product.image}}">
   <p>Price: {{product.price}}</p>
   <p>Description: {{product.description}}</p>
+  {{update-product product=product update="update"}}
+  <button {{action 'delete' product}}>Delete Product</button>
 </li>

@@ -1,0 +1,23 @@
+{{#if showUpdateProduct}}
+<form>
+  <div class="form-group">
+    <label for="name">Product Name</label>
+    {{input value=name id="name"}}
+  </div>
+  <div class="form-group">
+    <label for="name">Description</label>
+    {{input value=description id="description"}}
+  </div>
+  <div class="form-group">
+    <label for="price">Price</label>
+    {{input value=price id="price"}}
+  </div>
+  <div class="form-group">
+    <label for="image">Link to Image</label>
+    {{input value=image id="image"}}
+  </div>
+  <button {{action 'update' product}}>Submit</button>
+</form>
+{{else}}
+  <button {{action 'showUpdate'}}>Update</button>
+{{/if}}
